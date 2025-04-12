@@ -37,8 +37,8 @@ prediction_probabilities = pipeline.named_steps["classifier"].predict_proba(X_ne
 
 for i, msg in enumerate(new_messages):
     prediction = "Spam" if predictions[i] == 1 else "Not-Spam"
-    spam_probability = prediction_probabilities[i][1]  # Вероятность спама
-    ham_probability = prediction_probabilities[i][0]  # Вероятность не-спама
+    spam_probability = prediction_probabilities[i][1]
+    ham_probability = prediction_probabilities[i][0]
 
     print(f"Message: {msg}")
     print(f"Prediction: {prediction}")
